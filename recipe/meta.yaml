@@ -10,9 +10,9 @@ source:
   sha256: 9df3ec2bcf3c137fcbb9da32cb3e000c7a423912dcf60b853b47f089bdf31472
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -34,9 +34,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Pig for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-pig package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-pig/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
