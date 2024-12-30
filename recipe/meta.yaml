@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-apache-pig" %}
-{% set version = "4.5.0" %}
+{% set version = "4.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_pig-{{ version }}.tar.gz
-  sha256: d4c00882d7cbb4e2ad43f9fe319e95a1d0d2fe4898441f34f293cf36a2af5011
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_pig-{{ version }}.tar.gz
+  sha256: 9c8c4ee14cc77d4b1607f4b9c08626cab84a259992ff3992e428ef0a4c0d12a9
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
-    - apache-airflow >=2.8.0
+    - python >={{ python_min }},<4.dev0
+    - apache-airflow >=2.9.0
 
 test:
   imports:
@@ -29,6 +29,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
