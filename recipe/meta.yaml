@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-pig" %}
-{% set version = "4.6.0" %}
+{% set version = "4.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_pig-{{ version }}.tar.gz
-  sha256: 9c8c4ee14cc77d4b1607f4b9c08626cab84a259992ff3992e428ef0a4c0d12a9
+  sha256: ccc23ed73e885da75d8af541efa5427b1933fae13c7a776e28953e04906328fd
 
 build:
   noarch: python
