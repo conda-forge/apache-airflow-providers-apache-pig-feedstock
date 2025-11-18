@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-apache-pig" %}
-{% set version = "4.7.3" %}
-{% set python_min = "3.10" %}
+{% set version = "4.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_pig-{{ version }}.tar.gz
-  sha256: 9dbfc698e9893e0b753709c76f166ce139cb1ff863608a1b62c84a8904a63fb7
+  sha256: 7ac95603e07a8b07b14b57efc2036effab641a8dacff5ae678215eb3289a8553
 
 build:
   noarch: python
@@ -37,7 +36,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-pig for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/apache/pig/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-pig/stable/index.html
   dev_url: https://github.com/apache/airflow/
