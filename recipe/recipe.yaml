@@ -28,7 +28,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.apache.pig
+      - airflow.providers.apache.pig
       pip_check: true
       python_version: ${{ python_min }}.*
 
