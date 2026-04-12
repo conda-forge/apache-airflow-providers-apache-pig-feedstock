@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-pig
-  version: "4.8.3"
+  version: "4.8.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_pig-${{ version }}.tar.gz
-  sha256: 78e86cecd6a2b3f64f3a009bf942ac7e2dc7aaad1ced8d5974c4f7926fefdac7
+  sha256: 49551f8039757f87aa4485178e25fd27bd52a86e2a9f558faabd2d68844e7851
 
 build:
   noarch: python
